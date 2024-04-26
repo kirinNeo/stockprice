@@ -2,6 +2,11 @@ import pandas as pd
 import yfinance as yf
 import altair as alt
 import streamlit as st
+import os
+
+cache_dir = os.getenv('YFINANCE_CACHE_DIR', 'default_cache_path')
+yf.cache_path = cache_dir
+
 
 st.title('米国株価可視化アプリ')
 
