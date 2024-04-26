@@ -27,7 +27,7 @@ days = st.sidebar.slider('日数', 1, 90, 30)
 
 st.write(f"### 過去{days}日間のGAFA+α株価")
 
-@st.cache_data
+@st.cache
 def get_data(days, tickers):
     df = pd.DataFrame()
     for company in tickers.keys():
