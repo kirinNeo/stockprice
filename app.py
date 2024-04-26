@@ -7,6 +7,12 @@ import os
 cache_dir = os.getenv('YFINANCE_CACHE_DIR', 'C:\\yfinance_cache')
 yf.cache_path = cache_dir
 
+# ディレクトリが存在しない場合は作成
+if not os.path.exists(cache_dir):
+    os.makedirs(cache_dir)
+
+yf.cache_path = cache_dir
+
 
 st.title('米国株価可視化アプリ')
 
