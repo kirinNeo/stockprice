@@ -4,7 +4,7 @@ import altair as alt
 import streamlit as st
 import os
 
-cache_dir = os.getenv('YFINANCE_CACHE_DIR', 'default_cache_path')
+cache_dir = os.getenv('YFINANCE_CACHE_DIR', '/tmp/yfinance_cache')
 yf.cache_path = cache_dir
 
 
