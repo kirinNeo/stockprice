@@ -4,7 +4,7 @@ import altair as alt
 import streamlit as st
 import os
 
-cache_dir = os.getenv('YFINANCE_CACHE_DIR', 'C:\\yfinance_cache')
+cache_dir = 'C:\\yfinance_cache'
 
 
 # ディレクトリが存在しない場合は作成
